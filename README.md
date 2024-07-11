@@ -1,24 +1,45 @@
-# proyecto-final-recsys
+# Proyecto Final - Recommender Systems
 
-En el siguiente repositorio se encuentrar los codigos para poder recrear el paper del grupo 8 en el proyecto final.
+Este repositorio contiene el código necesario para replicar el trabajo del grupo 8 en el proyecto final del curso de Sistemas de Recomendación. Aquí encontrarás instrucciones detalladas sobre los datasets, el procesamiento de datos, y la ejecución del código para obtener los resultados del estudio.
 
-## **Datasets **
+## **Datasets**
 
-- Los links para los dataset original (books, anime, lfm, ml) , se encuentran en los siguientes links: https://zenodo.org/records/7428435
-- El dataset de netflix se encuentra en: https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data
-- El dataset de myanimelist 2020 se encuentra en: https://www.kaggle.com/datasets/hernan4444/anime-recommendation-database-2020?select=rating_complete.csv
+Los datasets utilizados en este proyecto provienen de diversas fuentes. A continuación, se presentan los enlaces para acceder a cada uno de ellos:
 
-## Procesamiento de los datos
+* Datasets originales (books, anime, lfm, ml): [Zenodo](https://zenodo.org/records/7428435)
+* Dataset de Netflix: [Kaggle](https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data)
+* Dataset de MyAnimeList 2020: [Kaggle](https://www.kaggle.com/datasets/hernan4444/anime-recommendation-database-2020?select=rating_complete.csv)
 
-En cuanto a los 4 datasets originales; books, anime, lfm, ml. Estos se encuentrar filtrados desde el paper original.
+## Procesamiento de los Datos
 
-Para netflix ocupamos el archivo Netflix_filter_data.ipynb para filtrar los datos. Estos cuentan con una gran cantidad de datos por lo que creamos sub archivos para el caso en que estos podrian crashear. De este archivo obtenemos la carpeta netflix con todos los archivos .csv necesarios.
+Para los cuatro datasets originales (books, anime, lfm, ml), se utilizaron versiones filtradas disponibles en el paper original.
 
-Para myanimelist 2020 creamos el archivo myanime_600k.csv el cual contiene las primeras 633279 filas.
+### Netflix
 
-## Ejecucion de codigo
+Para el dataset de Netflix, utilizamos el archivo `Netflix_filter_data.ipynb` para filtrar los datos. Dado que el dataset es muy grande, se crearon subarchivos para evitar problemas de memoria. El procesamiento genera una carpeta llamada `netflix` que contiene todos los archivos `.csv` necesarios.
 
-1. Para ejecutar los codigos de originales se debe correr MMRS_fairness.ipynb. En este se puede elegir entre los 4 datasets originales. El cual tiene los modelos KNNBasic, KNNWithMeans, NMF y COClustering. En la ultima celda se incluyen los resultados obtenidos
-2. Para obtener los resultados de MyAnimeList 2020 y netflix se deben ejecutar los archivos MMRS_nyanime.ipynb y MMRS_netflix.ipynb respectivamente.
-3. Para los resultados de most popular se debe ejecutar el archivo MMRS_most_popular.ipynb
-4. Para ALS, se debe correr el archivo MMRS_ALS, en este se puede seleccionar comentando el codigo que dataset ocupar entre los 4 dataset originales, netflix y myanimelist2024
+### MyAnimeList 2020
+
+Para el dataset de MyAnimeList 2020, se creó el archivo `myanime_600k.csv`, que contiene las primeras 633,279 filas del dataset original.
+
+Todos los archivos procesados utilizados en este proyecto están disponibles en las carpetas `data` y `netflix`.
+
+## Ejecución del Código
+
+Para replicar los experimentos y obtener los resultados del estudio, siga las siguientes instrucciones:
+
+1. **Ejecutar los códigos originales:**
+
+   - Ejecute `MMRS_fairness.ipynb` para replicar los experimentos con los cuatro datasets originales. Este notebook permite elegir entre los modelos KNNBasic, KNNWithMeans, NMF y CoClustering. Los resultados obtenidos se incluyen en la última celda del notebook.
+2. **Obtener resultados de MyAnimeList 2020 y Netflix:**
+
+   - Ejecute `MMRS_myanime.ipynb` para obtener los resultados del dataset de MyAnimeList 2020.
+   - Ejecute `MMRS_netflix.ipynb` para obtener los resultados del dataset de Netflix.
+3. **Resultados del modelo Most Popular:**
+
+   - Ejecute `MMRS_most_popular.ipynb` para obtener los resultados del modelo de recomendación basado en popularidad.
+4. **Resultados del modelo ALS:**
+
+   - Ejecute `MMRS_ALS.ipynb`. Puede seleccionar el dataset a utilizar (entre los cuatro datasets originales, Netflix y MyAnimeList 2020) comentando y descomentando el código correspondiente.
+
+Asegúrese de seguir las instrucciones específicas dentro de cada notebook para configurar correctamente los entornos y ejecutar los experimentos de manera eficiente.
