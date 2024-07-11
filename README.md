@@ -41,5 +41,8 @@ Para replicar los experimentos y obtener los resultados del estudio, siga las si
 4. **Resultados del modelo ALS:**
 
    - Ejecute `MMRS_ALS.ipynb`. Puede seleccionar el dataset a utilizar (entre los cuatro datasets originales, Netflix y MyAnimeList 2020) comentando y descomentando el código correspondiente.
+## Aleatoriedad
+
+Es importante destacar que los resultados obtenidos a partir de los modelos de recomendación presentan un grado de aleatoriedad inherente. ES por esto que al ejecutar los codigos y replicar el experimento los resultados podrian variar.
 
 Asegúrese de seguir las instrucciones específicas dentro de cada notebook para configurar correctamente los entornos y ejecutar los experimentos de manera eficiente.
